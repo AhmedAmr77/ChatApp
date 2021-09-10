@@ -48,7 +48,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="X4q-Z1-aC4" kind="show" id="lwW-8v-7ra"/>
+                                    <segue destination="X4q-Z1-aC4" kind="show" identifier="" id="lwW-8v-7ra"/>
                                 </connections>
                             </button>
                         </subviews>
