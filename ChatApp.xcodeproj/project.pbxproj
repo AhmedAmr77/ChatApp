@@ -13,6 +13,7 @@
 		0DC531D926EB8CEA0088415A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC531D826EB8CEA0088415A /* Assets.xcassets */; };
 		0DC531DC26EB8CEA0088415A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC531DA26EB8CEA0088415A /* LaunchScreen.storyboard */; };
 		0DC531E926EB8F930088415A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC531E826EB8F930088415A /* WelcomeViewController.swift */; };
+		0DC531EB26EC05990088415A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC531EA26EC05990088415A /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0DC531DB26EB8CEA0088415A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DC531DD26EB8CEA0088415A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DC531E826EB8F930088415A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		0DC531EA26EC05990088415A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC531E826EB8F930088415A /* WelcomeViewController.swift */,
+				0DC531EA26EC05990088415A /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				0DC531E926EB8F930088415A /* WelcomeViewController.swift in Sources */,
 				0DC531D026EB8CE70088415A /* AppDelegate.swift in Sources */,
 				0DC531D226EB8CE70088415A /* SceneDelegate.swift in Sources */,
+				0DC531EB26EC05990088415A /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
