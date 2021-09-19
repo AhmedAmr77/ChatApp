@@ -167,6 +167,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="kIY-A8-fKW" id="KgD-0r-LTU"/>
                         <outlet property="passwordTextfield" destination="gpW-l3-3oQ" id="t11-wd-UKx"/>
+                        <segue destination="nGv-Mw-j0b" kind="show" identifier="RegisterToChat" id="11s-7b-yY2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9N-dB-fom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,7 +183,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dYo-wp-gYh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="i2o-Gf-8A4">
@@ -242,6 +243,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4TQ-cy-pYL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iCy-jI-JiS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cd4-F0-6Wx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -335,11 +337,12 @@
                     <connections>
                         <outlet property="emailTextfield" destination="qmJ-DX-P5B" id="vDN-OP-ScY"/>
                         <outlet property="passwordTextfield" destination="Ks2-Cf-TcN" id="Jam-N7-oFG"/>
+                        <segue destination="nGv-Mw-j0b" kind="show" identifier="LoginToChat" id="7O0-6R-gfc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3P-Hj-nfa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2032" y="479"/>
+            <point key="canvasLocation" x="2031.8840579710147" y="478.79464285714283"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cnU-wX-wJX">
@@ -360,6 +363,9 @@
             <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7O0-6R-gfc"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
         <image name="textfield" width="298" height="93"/>
