@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
         
         titleLabel.text = ""
         var charIndex = 0.0
-        let titleText = "💬ChatApp"
+        let titleText = K.appName
         for char in titleText {
             Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { [weak self] _ in
                 guard let self = self else { return }

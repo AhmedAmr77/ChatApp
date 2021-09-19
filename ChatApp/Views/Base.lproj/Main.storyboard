@@ -243,7 +243,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4TQ-cy-pYL"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iCy-jI-JiS"/>
+                    <navigationItem key="navigationItem" id="iCy-jI-JiS">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="GtF-ul-WDw">
+                            <connections>
+                                <action selector="logoutPressed:" destination="nGv-Mw-j0b" id="NoK-wZ-GyR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cd4-F0-6Wx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
