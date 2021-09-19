@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D208B9426F7886800E996CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D208B9326F7886800E996CD /* LoginViewController.swift */; };
+		0D844C7F26F7F40900D8EC6E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D844C7E26F7F40900D8EC6E /* ChatViewController.swift */; };
 		0DC531D026EB8CE70088415A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC531CF26EB8CE70088415A /* AppDelegate.swift */; };
 		0DC531D226EB8CE70088415A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC531D126EB8CE70088415A /* SceneDelegate.swift */; };
 		0DC531D726EB8CE70088415A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC531D526EB8CE70088415A /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0D208B9326F7886800E996CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0D844C7E26F7F40900D8EC6E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0DC531CC26EB8CE70088415A /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC531CF26EB8CE70088415A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DC531D126EB8CE70088415A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				0DC531E826EB8F930088415A /* WelcomeViewController.swift */,
 				0D208B9326F7886800E996CD /* LoginViewController.swift */,
 				0DC531EA26EC05990088415A /* RegisterViewController.swift */,
+				0D844C7E26F7F40900D8EC6E /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				0DC531D026EB8CE70088415A /* AppDelegate.swift in Sources */,
 				0DC531D226EB8CE70088415A /* SceneDelegate.swift in Sources */,
 				0D208B9426F7886800E996CD /* LoginViewController.swift in Sources */,
+				0D844C7F26F7F40900D8EC6E /* ChatViewController.swift in Sources */,
 				0DC531EB26EC05990088415A /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

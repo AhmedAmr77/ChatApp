@@ -171,7 +171,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9N-dB-fom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2033" y="-110"/>
+            <point key="canvasLocation" x="2032" y="-235"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="gej-Fh-jom">
+            <objects>
+                <viewController id="nGv-Mw-j0b" customClass="ChatViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hH7-G2-j10">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dYo-wp-gYh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="i2o-Gf-8A4">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i2o-Gf-8A4" id="Hbd-lL-KaU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzq-mA-4u1">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7hq-pc-Y7D">
+                                        <rect key="frame" x="20" y="20" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="eBH-QT-Prn"/>
+                                        </constraints>
+                                        <color key="textColor" name="BrandPurple"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSL-d1-FOA">
+                                        <rect key="frame" x="354" y="20" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="WAf-o3-GRm"/>
+                                            <constraint firstAttribute="height" constant="40" id="n4f-hQ-YVr"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="p24-pl-aKI"/>
+                                            <constraint firstAttribute="width" constant="40" id="rDc-VX-i2r"/>
+                                        </constraints>
+                                        <color key="tintColor" name="BrandLightPurple"/>
+                                        <state key="normal" image="paperplane.fill" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandPurple"/>
+                                <constraints>
+                                    <constraint firstItem="7hq-pc-Y7D" firstAttribute="top" secondItem="gzq-mA-4u1" secondAttribute="top" constant="20" id="59N-cn-TO5"/>
+                                    <constraint firstAttribute="height" constant="60" id="PHM-9a-nWt"/>
+                                    <constraint firstItem="TSL-d1-FOA" firstAttribute="top" secondItem="gzq-mA-4u1" secondAttribute="top" constant="20" id="QB8-JF-0JV"/>
+                                    <constraint firstAttribute="trailing" secondItem="TSL-d1-FOA" secondAttribute="trailing" constant="20" id="YIy-e9-7CG"/>
+                                    <constraint firstItem="TSL-d1-FOA" firstAttribute="leading" secondItem="7hq-pc-Y7D" secondAttribute="trailing" constant="20" id="qXg-sn-uBc"/>
+                                    <constraint firstItem="7hq-pc-Y7D" firstAttribute="leading" secondItem="gzq-mA-4u1" secondAttribute="leading" constant="20" id="ri8-bu-RCT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BrandPurple"/>
+                        <constraints>
+                            <constraint firstItem="dYo-wp-gYh" firstAttribute="leading" secondItem="4TQ-cy-pYL" secondAttribute="leading" id="C6j-qH-SDE"/>
+                            <constraint firstItem="gzq-mA-4u1" firstAttribute="top" secondItem="dYo-wp-gYh" secondAttribute="bottom" id="Lbr-We-ZJy"/>
+                            <constraint firstItem="dYo-wp-gYh" firstAttribute="trailing" secondItem="4TQ-cy-pYL" secondAttribute="trailing" id="OF6-UC-kXA"/>
+                            <constraint firstItem="gzq-mA-4u1" firstAttribute="trailing" secondItem="4TQ-cy-pYL" secondAttribute="trailing" id="fb1-wg-knJ"/>
+                            <constraint firstItem="4TQ-cy-pYL" firstAttribute="bottom" secondItem="gzq-mA-4u1" secondAttribute="bottom" id="gk6-gd-nyg"/>
+                            <constraint firstItem="gzq-mA-4u1" firstAttribute="leading" secondItem="4TQ-cy-pYL" secondAttribute="leading" id="gvV-P1-9FF"/>
+                            <constraint firstItem="dYo-wp-gYh" firstAttribute="top" secondItem="4TQ-cy-pYL" secondAttribute="top" id="yGS-gj-RtX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4TQ-cy-pYL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cd4-F0-6Wx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2990" y="98"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="R6V-bP-Mvc">
@@ -265,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3P-Hj-nfa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2032" y="611"/>
+            <point key="canvasLocation" x="2032" y="479"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cnU-wX-wJX">
@@ -287,12 +361,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandBlue">
             <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandLightBlue">
             <color red="0.92199999094009399" green="0.98000001907348633" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandLightPurple">
+            <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPurple">
+            <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
