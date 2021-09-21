@@ -14,11 +14,9 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
-    var messages = [
-        Message(sender: "a@a.com", body: "Hi"),
-        Message(sender: "b@b.com", body: "Hello"),
-        Message(sender: "a@a.com", body: "Whats up")
-    ]
+    let db = Firestore.firestore()
+    
+    var messages = [Message]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +25,45 @@ class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         
         chatTableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        
+        loadMessages()
+    }
+    
+    func loadMessages() {
+        db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.messages = []
+                for document in querySnapshot!.documents {
+                    let  data = document.data()
+                    if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
+                        self.messages.append(Message(sender: messageSender, body: messageBody))
+                        DispatchQueue.main.async {
+                            self.chatTableView.reloadData()
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        if let messageBody = messageTextfield.text, let messageSeender = Auth.auth().currentUser?.email {
+            db.collection(K.FStore.collectionName).addDocument(data: [
+                K.FStore.senderField: messageSeender,
+                K.FStore.bodyField: messageBody,
+                K.FStore.dateField: Date().timeIntervalSince1970]) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Successfully")
+                        DispatchQueue.main.async {
+                            self.messageTextfield.text = ""
+                        }
+                    }
+            }
+        }
     }
     
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
@@ -39,9 +73,7 @@ class ChatViewController: UIViewController {
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
         }
-          
     }
-    
 }
 
 extension ChatViewController: UITableViewDataSource {
@@ -54,6 +86,4 @@ extension ChatViewController: UITableViewDataSource {
         cell.messageLabel.text = messages[indexPath.row].body
         return cell
     }
-    
-    
 }
