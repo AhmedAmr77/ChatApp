@@ -18,6 +18,9 @@
 		0DC531E926EB8F930088415A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC531E826EB8F930088415A /* WelcomeViewController.swift */; };
 		0DC531EB26EC05990088415A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC531EA26EC05990088415A /* RegisterViewController.swift */; };
 		0DC531ED26EC18110088415A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DC531EC26EC18100088415A /* GoogleService-Info.plist */; };
+		0DC915A026F9F26D007C90D1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9159F26F9F26D007C90D1 /* Message.swift */; };
+		0DC915A326F9F623007C90D1 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC915A126F9F623007C90D1 /* MessageCell.swift */; };
+		0DC915A426F9F623007C90D1 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC915A226F9F623007C90D1 /* MessageCell.xib */; };
 		E146DCE446680CBAED785CF2 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDF53D74681E3385F4985D9 /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		0DC531E826EB8F930088415A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		0DC531EA26EC05990088415A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0DC531EC26EC18100088415A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0DC9159F26F9F26D007C90D1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		0DC915A126F9F623007C90D1 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		0DC915A226F9F623007C90D1 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		3C44A22DD9150F653278FDB9 /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		3FDF53D74681E3385F4985D9 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		735D5E55402FEDB7BD8DCECF /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 		0DC531E326EB8DD20088415A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0DC9159F26F9F26D007C90D1 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				0DC531D526EB8CE70088415A /* Main.storyboard */,
+				0DC915A126F9F623007C90D1 /* MessageCell.swift */,
+				0DC915A226F9F623007C90D1 /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC915A426F9F623007C90D1 /* MessageCell.xib in Resources */,
 				0DC531DC26EB8CEA0088415A /* LaunchScreen.storyboard in Resources */,
 				0DC531ED26EC18110088415A /* GoogleService-Info.plist in Resources */,
 				0DC531D926EB8CEA0088415A /* Assets.xcassets in Resources */,
@@ -251,8 +261,10 @@
 				0DC531D226EB8CE70088415A /* SceneDelegate.swift in Sources */,
 				0D208B9426F7886800E996CD /* LoginViewController.swift in Sources */,
 				0D844C8126F7FBCB00D8EC6E /* Constants.swift in Sources */,
+				0DC915A026F9F26D007C90D1 /* Message.swift in Sources */,
 				0D844C7F26F7F40900D8EC6E /* ChatViewController.swift in Sources */,
 				0DC531EB26EC05990088415A /* RegisterViewController.swift in Sources */,
+				0DC915A326F9F623007C90D1 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
